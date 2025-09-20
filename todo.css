@@ -1,0 +1,187 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f9fa;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: #0077b6;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+.todo-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 750px;
+}
+
+label {
+  font-weight: bold;
+}
+
+#taskDate {
+  margin: 0.5rem 0 1rem 0;
+  padding: 0.4rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.task-input {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.task-input input,
+.task-input select,
+.task-input button {
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.task-input button {
+  background: #0077b6;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.task-input button:hover {
+  background: #023e8a;
+}
+
+/* Progress bar */
+.progress {
+  margin: 1rem 0;
+  position: relative;
+}
+
+.progress-bar {
+  background: #e0e0e0;
+  border-radius: 20px;
+  height: 25px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#progressFill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #00b4db, #0083b0);
+  border-radius: 20px 0 0 20px;
+  text-align: right;
+  line-height: 25px;
+  color: white;
+  font-weight: bold;
+  padding-right: 10px;
+  transition: width 0.4s ease-in-out;
+}
+
+
+/* Task list */
+#taskList {
+  list-style: none;
+}
+
+#taskList li {
+  background: #e9ecef;
+  margin: 0.5rem 0;
+  padding: 0.7rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#taskList li.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.task-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-time {
+  font-weight: bold;
+}
+
+.task-category {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Priority colors */
+.priority-low { border-left: 5px solid green; }
+.priority-medium { border-left: 5px solid orange; }
+.priority-high { border-left: 5px solid red; }
+
+.delete-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .task-input {
+    flex-direction: column;
+  }
+  
+  .task-input input,
+  .task-input select,
+  .task-input button {
+    width: 100%;
+    margin: 0.2rem 0;
+  }
+  
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  #loginPopup, .account-menu {
+    width: 90%;
+    right: 5%;
+  }
+
+  .todo-container {
+    padding: 1rem;
+  }
+
+  .progress-bar {
+    height: 20px;
+  }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Planner Pro</title>
+  <link rel="stylesheet" href="assets/css/todo.css">
+</head>
+<body>
+  <header>
+    <h1>📅 Daily Planner Pro</h1>
+  </header>
+
+  <main>
+    <div class="todo-container">
+      <!-- Date selector -->
+      <label for="taskDate">Select Date:</label>
+      <input type="date" id="taskDate">
+
+      <!-- Task input with start time, category, priority -->
+      <div class="task-input">
+        <input type="time" id="taskStartTime">
+        <input type="text" id="taskInput" placeholder="Add a new task...">
+        
+        <select id="taskCategory">
+          <option value="Study">📘 Study</option>
+          <option value="Work">💼 Work</option>
+          <option value="Personal">🏠 Personal</option>
+          <option value="Fitness">💪 Fitness</option>
+        </select>
+
+        <select id="taskPriority">
+          <option value="low">🟢 Low</option>
+          <option value="medium">🟡 Medium</option>
+          <option value="high">🔴 High</option>
+        </select>
+
+        <button id="addBtn">Add</button>
+      </div>
+
+      <!-- Progress bar -->
+      <div class="progress">
+        <label>Progress:</label>
+        <div class="progress-bar">
+          <div id="progressFill"></div>
+        </div>
+      </div>
+
+      <!-- Task list -->
+      <ul id="taskList"></ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Study Sutra | Daily Planner Pro</p>
+  </footer>
+
+  <script src="assets/js/todo.js"></script>
+</body>
+</html>
